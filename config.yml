@@ -27,7 +27,7 @@ fetch_retries: 2
 
 # ---- AI rewrite / translation ----
 translate_enabled: true
-openai_model: "chatgpt-4o-latest"
+openai_model: "gpt-5.4-mini"
 openai_base_url: "https://api.openai.com/v1"
 target_language: "English"
 rewrites_per_run: 1000
@@ -38,7 +38,8 @@ translate_max_retries: 2
 
 # The instruction this app's AI follows. Each app can differ.
 rewrite_prompt: |
-  You are rewriting RSS feed items. If the text is not in English,
-  translate it into English first, then rewrite the title and
-  description to read clearly and naturally. Preserve names and
-  key terminology. Keep the meaning faithful; do not invent facts.
+  rewrite_prompt: |
+  You are rewriting cycling PODCAST episode items. If the text is not
+  in English, translate it to English first, then rewrite the title and
+  a concise description. Preserve show, host, and guest names. Do not
+  invent facts. Remove HTML, ads, and sponsor reads.
